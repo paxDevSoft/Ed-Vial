@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+        <link rel="icon" href="images/icono.jpg" />
+        <link rel="stylesheet" href="css/styles_juego1.css" type="text/css" charset="utf-8" />
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"/> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    </head>
+
+    <body background="./img/fondo.png" class=" cyan">
+           <nav>
+            <div class="nav-wrapper yellow">
+                <a href="#" class="brand-logo right"><img class="materialboxed" width="60" src="images/icono.jpg"></a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li><a href="index.html" class="waves-effect waves-light btn-large"><i class="material-icons left">home</i>INICIO</a></li>
+                    <li><a href="juego2.html" class="waves-effect waves-light btn-large"><i class="material-icons right">videogame_asset last_page</i>SIGUIENTE JUEGO</a></li>
+                </ul>
+                <ul id="nav-mobile" class="sidenav cyan lighten-1">
+        <li><a href="index.html" class="waves-effect waves-light btn-large"><i class="material-icons left">home</i>INICIO</a></li>
+
+        </ul>
+            </div>
+        </nav>
+
+        <div class="container">
+           <br>
+            <div id="canvas">
+                <div id="div_centro_vertical"></div>
+                <div id="div_centro_horizontal"></div>
+                <div id="p_splash" class="pantalla">
+                    <img src="img/nuevas/splash.jpg" alt="" />
+                </div>
+                <a href="#" title="Apagar/Desactivar sonido" id="a_sonido"></a>
+                <div id="p_explicacion" class="pantalla">
+                    <div class="canvas_explicacion">
+                        <div class="canvas_explicacion_pasos primero activo" number="1">
+                            <img src="img/nuevas/explicacion-1.png" class="texto-explicacion"/>
+                            <ul>
+                                <li><img src="img/senales60/1.png" /></li>
+                                <li><img src="img/senales60/3.png" /></li>
+                            </ul>
+                        </div>
+                        <div class="canvas_explicacion_pasos" number="2">
+                            <img src="img/nuevas/explicacion-2.png" class="texto-explicacion"/>
+                            <ul>
+                                <li><img src="img/senales60/34.png" /></li>
+                                <li><img src="img/senales60/35.png" /></li>
+                                <li><img src="img/senales60/39.png" /></li>
+                                <li><img src="img/senales60/41.png" /></li>
+                                <li><img src="img/senales60/42.png" /></li>
+                                <li><img src="img/senales60/43.png" /></li>
+                                <li><img src="img/senales60/44.png" /></li>
+                                <li><img src="img/senales60/45.png" /></li>
+                                <li><img src="img/senales60/47.png" /></li>
+                            </ul>
+                        </div>
+                        <div class="canvas_explicacion_pasos" number="3">
+                            <img src="img/nuevas/explicacion-3.png" class="texto-explicacion"/>
+                            <ul>
+                                <li><img src="img/senales60/21.png" /></li>
+                                <li><img src="img/senales60/22.png" /></li>
+                                <li><img src="img/senales60/23.png" /></li>
+                                <li><img src="img/senales60/24.png" /></li>
+                                <li><img src="img/senales60/25.png" /></li>
+                                <li><img src="img/senales60/26.png" /></li>
+                                <li><img src="img/senales60/27.png" /></li>
+                                <li><img src="img/senales60/28.png" /></li>
+                                <li><img src="img/senales60/29.png" /></li>
+                                <li><img src="img/senales60/30.png" /></li>
+                            </ul>
+                        </div>
+                        <div class="canvas_explicacion_pasos" number="4">
+                            <img src="img/nuevas/explicacion-4.png" class="texto-explicacion"/>
+                            <ul>
+                                <li><img src="img/senales60/8.png" /></li>
+                                <li><img src="img/senales60/9.png" /></li>
+                                <li><img src="img/senales60/10.png" /></li>
+                            </ul>
+                        </div>
+                        <div class="canvas_explicacion_pasos" number="5">
+                            <img src="img/nuevas/explicacion-5.png" class="texto-explicacion"/>
+                            <ul>
+                                <li><img src="img/senales60/7.png" /></li>
+                                <li><img src="img/senales60/11.png" /></li>
+                                <li><img src="img/senales60/13.png" /></li>
+                                <li><img src="img/senales60/16.png" /></li>
+                                <li><img src="img/senales60/17.png" /></li>
+                                <li><img src="img/senales60/18.png" /></li>
+                            </ul>
+                        </div>
+                        <div class="canvas_explicacion_pasos ultimo" number="6">
+                            <img src="img/nuevas/explicacion-6.png" class="texto-explicacion"/>
+                            <ul>
+                                <li><img src="img/senales60/2.png" /></li>
+                                <li><img src="img/senales60/4.png" /></li>
+                                <li><img src="img/senales60/5.png" /></li>
+                                <li><img src="img/senales60/6.png" /></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="botonera">
+                        <span class="b_salir boton">Salir</span>
+                        <span class="b_anterior boton">Anterior</span>
+                        <span class="b_siguiente boton">Siguiente</span>
+                    </div>
+                </div>
+                <div id="p_empezar" class="pantalla">
+                    <div class="titulo">
+                        <h2>Toca la se&ntilde;al</h2>
+                    </div>
+                    <div class="explicacion">
+                        <a href="#" title="Repasa aqu&iacute; las se&ntilde;ales" class="vinculo"><img src="img/nuevas/bocadillo-explicacion.png" alt="Repasa aquÃ las seÃ±ales" /></a>
+                    </div>
+                    <div class="botonera">
+                        <span class="b_empezar boton">Empezar</span>
+                    </div>
+                </div>
+                <div id="p_mensaje" class="pantalla">
+                    <div class="mensaje"></div>
+                    <div class="botonera"></div>
+                </div>
+                <div id="p_juego" class="pantalla">
+                    <div id="senales"></div>
+                </div>
+                <div id="info">
+                    <div id="vidas"><img src="img/nuevas/bg-vidas.png" /></div>
+                    <div id="div_nivel">
+                        <p>NIVEL <span id="nivel">1</span></p>
+                    </div>
+                    <div id="info_texto"></div>
+                    <div id="tiempo">
+                        <img src="img/nuevas/reloj.png" />
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--JavaScript at end of body for optimized loading-->
+        <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+        <script type="text/javascript" src="js/jquery-1.5.min.js"></script>
+        <script type="text/javascript" src="js/niveles2.min.js" charset="utf-8"></script>
+        <script type="text/javascript" src="js/juego2.min.js"></script>
+        <script type="text/javascript" src="js/soundmanager2.js"></script>
+        <script type="text/javascript" src="js/st.js"></script>
+        <script type="text/javascript">
+            var canvas = $('#canvas');
+            var Ojuego = new Capplication(canvas);
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Ed-Vial</title>
+    <!--<link rel="shortcut icon" href="./evHTML/TemplateData/favicon.ico">-->
+    <link rel="icon" href="images/icono.jpg" />
+    <link rel="stylesheet" href="./evHTML/TemplateData/style.css">
+    <script src="./evHTML/TemplateData/UnityProgress.js"></script>
+    <script src="./evHTML/Build/UnityLoader.js"></script>
+    <script>
+      var gameInstance = UnityLoader.instantiate("gameContainer", "evHTML/Build/evHTML.json", {onProgress: UnityProgress});
+    </script>
+  </head>
+  <body  background="./img/fondo.png" style="background-color: aqua">
+    <div class="webgl-content">
+      <div id="gameContainer" style="width: 960px; height: 600px "></div>
+      <div class="footer">
+        <div class="webgl-logo"></div>
+        <div class="fullscreen" onclick="gameInstance.SetFullscreen(1)"></div>
+        <div class="title">Ed-Vial</div>
+        <div class="container"><a href="index.html">Volver</a></div>
+
+      </div>
+    </div>
+  </body>
+</html>

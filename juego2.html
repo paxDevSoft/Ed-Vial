@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <!--Import Google Icon Font-->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <!--Import materialize.css-->
+        <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css"  media="screen,projection"/>
+	<link rel="stylesheet" href="css/juego2/styles.css?v=0.1">
+        <link rel="icon" href="images/icono.jpg" />
+        <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"/> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta charset="UTF-8">
+<script src="js/modernizr-1.7.min.js"></script>
+    </head>
+
+    <body background="./img/fondo.png" class=" cyan">
+           <nav>
+            <div class="nav-wrapper yellow">
+                <a href="#" class="brand-logo right"><img class="materialboxed" width="60" src="images/icono.jpg"></a>
+                <ul id="nav-mobile" class="left hide-on-med-and-down">
+                    <li><a href="index.html" class="waves-effect waves-light btn-large"><i class="material-icons left">home</i>INICIO</a></li>
+                    <li><a href="juego3.html" class="waves-effect waves-light btn-large"><i class="material-icons right">videogame_asset last_page</i>SIGUIENTE JUEGO</a></li>
+                </ul>
+            </div>
+        </nav>
+
+<div id="div_juego">
+	<div id="div_precarga">
+		<div id="div_leyenda"></div>
+		<div id="div_contenedor_progreso">
+			<div id="div_progreso"></div>
+		</div>
+		<img src="img/mascara.png" alt="Cargando..." id="img_mascara" />
+		<div id="mostrar"></div>
+		<div id="preloader">
+			<div id="preloader_rocket"></div>
+		</div>
+		<div id="div_porcentaje"></div>
+	</div>	
+	<div id="div_mapfre"><img src="img/logo-mapfre1.png" alt="Fundación Mapfre" id="img_mapfre" /></div>
+	<img src="img/logo-edad.png" alt="Edad de 6 a 11 años" id="img_edad" />
+	<img src="img/nube1.png" alt="Fundación MAPFRE" id="img_nube1" />
+	<img src="img/nube2.png" alt="Fundación MAPFRE" id="img_nube2" />
+	<img src="img/titulo.png" alt="EL JUEGO DE LAS SEÑALES" id="img_titulo" />
+	<img src="img/nino-bici.png" alt="EL JUEGO DE LAS SEÑALES" id="img_nino_bici" />
+
+
+	<a href="#" title="¿Cómo se juega?"  id="a_como_jugar" class="desvanecer-home"><img src="img/bocata-como-jugar.png" allt="¿cómo se juega?" /></a>
+	<div id="div_instrucciones">
+		<img src="img/instrucciones.png" alt="INSTRUCCIONES" />
+		<a href="#" title="CERRAR INSTRUCCIONES" id="a_cerrar_instrucciones"><img src="img/btn-cerrar-instrucciones.png" alt="CERRAR INSTRUCCIONES" /></a>
+	</div>
+
+	<a href="#" title="Repasa las señales" id="a_repasa_senales" class="desvanecer-home"><img src="img/bocata-repasa.png" allt="Repasa las señaes" /></a>
+	<div id="div_repaso_senales">
+		<img src="img/repaso-senales.png" alt="REPASA LAS SEÑALES" />
+		<a href="#" title="CERRAR REPASO DE SEÑALES" id="a_cerrar_repaso_senales"><img src="img/btn-cerrar-instrucciones.png" alt="CERRAR REPASO SEÑALES" /></a>
+
+		<a href="#" title="Paso obligatorio de peatones" id="a_explicacion_1" alt="Indica por dónde debemos circular como peatones" class="senal50"><img src="img/7.png" alt="Paso obligatorio de peatones" /></a>
+		<a href="#" title="Velocidad obligatoria 30 km/h" id="a_explicacion_2" alt="El número señala la velocidad a la que tenemos que circular" class="senal50"><img src="img/13.png" alt="Velocidad obligatoria 30 km/h" /></a>
+		<a href="#" title="Peligro circulación de ciclistas" id="a_explicacion_3" alt="Avisa al conductor de que se acerca a una zona por la que circulan ciclistas" class="senal50"><img src="img/33.png" alt="Peligro circulación de ciclistas" /></a>
+		<a href="#" title="Sentido giro obligatorio" id="a_explicacion_4" alt="Circularemos siempre en el sentido de la flechas, como en las rotondas" class="senal50"><img src="img/16.png" alt="Sentido giro obligatorio" /></a>
+
+
+
+		<a href="#" title="Uso obligatorio del paso de cebra" id="a_explicacion_5" alt="Cruzamos siempre por el paso de cebra" class="senal50"><img src="img/5.png" alt="Uso obligatorio del paso de cebra" /></a>
+		<a href="#" title="Prohibido el paso a peatones" id="a_explicacion_6" alt="Los peatones no podemos circular por esta vía" class="senal50"><img src="img/25.png" alt="Prohibido el paso a peatones" /></a>
+		<a href="#" title="Peligro circulación en ambos sentidos" id="a_explicacion_7" alt="Los conductores deben estar atentos en carretera" class="senal50"><img src="img/32.png" alt="Peligro circulación en ambos sentidos" /></a>
+		<a href="#" title="Prohibido circular a más de 40 km/h" id="a_explicacion_8" alt="Nunca podemos sobrepasar esta velocidad con esta señal" class="senal50"><img src="img/24.png" alt="Prohibido circular a más de 40 km/h" /></a>
+		<a href="#" title="Prohibido girar a la derecha" id="a_explicacion_9" alt="No podemos tomar esa dirección" class="senal50"><img src="img/22.png" alt="Prohibido girar a la derecha" /></a>
+		<a href="#" title="Stop" id="a_explicacion_10" alt="Nos detenemos siempre" alt="En este cruce siempre damos prioridad a los coches que viene por la derecha" class="senal50"><img src="img/3.png" alt="Stop" /></a>
+		<a href="#" title="Ceda el paso" id="a_explicacion_11" alt="Nos obliga a detenernos ceder el paso" class="senal50"><img src="img/1.png" alt="Ceda el paso" /></a>
+		<a href="#" title="Prohibido adelantar" id="a_explicacion_12" alt="En carretera el conductor no puede adelantar con esta señal" class="senal50"><img src="img/21.png" alt="Prohibido adelantar" /></a>
+		<a href="#" title="Peligro por cruce con prioridad por la derecha" id="a_explicacion_13" alt="En este cruce siempre damos prioridad a los coches que viene por la derecha" class="senal50"><img src="img/43.png" alt="Peligro por cruce con prioridad por la derecha" /></a>
+		<a href="#" title="Peligro curva peligrosa a la derecha" id="a_explicacion_14" alt="Avisa al conductor de curvas peligrosas hacia la derecha" class="senal50"><img src="img/38.png" alt="Peligro curva peligrosa a la derecha" /></a>
+		<a href="#" title="Peligro zona de obras" id="a_explicacion_15" alt="Tendremos que estar atentos. ¡Puede haber operarios o camiones!" class="senal50"><img src="img/35.png" alt="Peligro zona de obras" /></a>
+		<a href="#" title="Peligro centro escolar cercano" id="a_explicacion_16" alt="Avisa al conductor de que se acerca a un colegio" class="senal50"><img src="img/34.png" alt="Peligro centro escolar cercano" /></a>
+		<a href="#" title="Prohibido circular" id="a_explicacion_17" alt="Ningún vehículo puede circular por esta vía" class="senal50"><img src="img/29.png" alt="Prohibido circular" /></a>
+		<a href="#" title="Prohibido el paso" id="a_explicacion_18" alt="No podemos circular en este sentido" class="senal50"><img src="img/28.png" alt="Prohibido el paso" /></a>
+		<a href="#" title="Prohibido girar a la izquierda" id="a_explicacion_19" alt="No podemos tomar esa dirección" class="senal50"><img src="img/31.png" alt="Prohibido girar a la izquierda" /></a>
+		<a href="#" title="Giro obligatorio a la derecha" id="a_explicacion_20" alt="Tenemos que continuar obligatoriamente en esa dirección" class="senal50"><img src="img/17.png" alt="Giro obligatorio a la derecha" /></a>
+
+		<div id="div_bocadillo_explicacion" style="width: 100%">
+			<div id="div_titulo_explicacion">
+				<img src="img/tit-16.png" alt="PELIGRO POR CRUCE CON PRIORIDAD A LA DERECHA" />
+			</div>
+			<div>
+				<div id="div_senial_explicacion"><img src="img/senal-16.png" alt="PELIGRO POR CRUCE CON PRIORIDAD A LA DERECHA" /></div>
+				<div id="div_texto_explicacion"><span class="txt-explicacion-senal">En este cruce siempre damos prioridad a los coches que viene por la derecha</span></div>
+			</div>
+		</div>
+	</div>
+
+	<div id="div_empezar" class="desvanecer-home">
+		<a href="#" title="EMPEZAR" id="a_empezar_home"><img src="img/btn-empezar.png" allt="EMPEZAR" /></a>
+	</div>
+
+	<div id="div_desarrollo_juego">
+		<a href="#" title="CERRAR JUEGO" id="a_cerrar_juego"><img src="img/btn-cerrar-instrucciones.png" alt="CERRAR JUEGO" /></a>
+		<div id="div_puntos"><span id="span_puntuacion" class="txt-puntos"></span></div>
+		<img src="img/white.gif" alt="Lo que sea" id="img_senal_grande" />
+		<div id="div_seleccion_senales">
+			<a href="#" title="Stop" id="a_seleccion_1" class="senal60"><img src="img/senales60/3.png" alt="Stop" /></a>
+			<a href="#" title="Precaución, carretera de doble sentido" id="a_seleccion_2" class="senal60"><img src="img/32.png" alt="Precaución, carretera de doble sentido" /></a>
+			<a href="#" title="Prohibida la circulación a peatones" id="a_seleccion_3" class="senal60"><img src="img/25.png" alt="Prohibida la circulación a peatones" /></a>
+			<a href="#" title="Precaución cruce" id="a_seleccion_4" class="senal60"><img src="img/43.png" alt="Precaución cruce" /></a>
+			<a href="#" title="Precaución, zona escolar" id="a_seleccion_5" class="senal60"><img src="img/34.png" alt="Precaución, zona escolar" /></a>
+			<a href="#" title="Prohibido adelantar" id="a_seleccion_6" class="senal60"><img src="img/21.png" alt="Stop" /></a>
+			<a href="#" title="Sólo permitida la circulación de peatones" id="a_seleccion_7" class="senal60"><img src="img/senales60/7.png" alt="Sólo permitida la circulación de peatones" /></a>
+			<a href="#" title="Obligación de circular a 30km/h" id="a_seleccion_8" class="senal60"><img src="img/13.png" alt="Obligación de circular a 30km/h" /></a>
+			<a href="#" title="Obligación de rodear la glorieta" id="a_seleccion_9" class="senal60"><img src="img/16.png" alt="Obligación de rodear la glorieta" /></a>
+			<a href="#" title="Prohibido girar a la derecha" id="a_seleccion_10" class="senal60"><img src="img/22.png" alt="Prohibido girar a la derecha" /></a>
+			<a href="#" title="Ceda el paso" id="a_seleccion_11" class="senal60"><img src="img/1.png" alt="Ceda el paso" /></a>
+			<a href="#" title="Precaución zona de curvas" id="a_seleccion_12" class="senal60"><img src="img/38.png" alt="Precaución zona de curvas" /></a>
+			<a href="#" title="Prohibida la circulación" id="a_seleccion_13" class="senal60"><img src="img/29.png" alt="Prohibida la circulación" /></a>
+			<a href="#" title="Obligación de girar a la derecha" id="a_seleccion_14" class="senal60"><img src="img/17.png" alt="Obligación de girar a la derecha" /></a>
+			<a href="#" title="Precaución, paso de peatones" id="a_seleccion_15" class="senal60"><img src="img/5.png" alt="Precaución, paso de peatones" /></a>
+			<a href="#" title="Prohibido el paso" id="a_seleccion_16" class="senal60"><img src="img/28.png" alt="Prohibido el paso" /></a>
+			<a href="#" title="Precaución, bicicletas" id="a_seleccion_17" class="senal60"><img src="img/33.png" alt="Precaución, bicicletas" /></a>
+			<a href="#" title="Límite de velocidad a 40km/h" id="a_seleccion_18" class="senal60"><img src="img/24.png" alt="Límite de velocidad a 40km/h" /></a>
+			<a href="#" title="Prohibida la circulación a camiones" id="a_seleccion_19" class="senal60"><img src="img/31.png" alt="Prohibido girar a la izquierda" /></a>
+			<a href="#" title="Precaución, obras" id="a_seleccion_20" class="senal60"><img src="img/35.png" alt="Precaución, obras" /></a>
+			<img src="img/selector-senales.png" alt="señal seleccionada" id="img_selector_senales" />
+		</div>
+		<img src="img/ahoratu.jpg" alt="¡Ahora tu!" id="img_ahoratu" />
+		<img src="img/ok.jpg" alt="OK" id="img_ok" />
+		<img src="img/white.gif" alt="Señal pulsada" id="img_senal_pulsada" />
+		<div id="div_ko">
+			<p>
+				<span class="error">HAS CONSEGUIDO </span><span class="error rojo" id="span_puntuacion_ko">(X)</span><span class="error"> PUNTOS</span>
+			</p>
+			<p>
+				<span class="error">VUELVE A INTENTARLO</span>
+			</p>
+			<a href="#" title="EMPEZAR" id="a_empezar_ko"><img src="img/btn-empezar.png" allt="EMPEZAR" /></a>
+		</div>
+	</div>
+</div>
+<div></div>
+<img src="img/senal-20.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/senal-19.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/senal-18.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/senal-17.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/senal-16.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/senal-15.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/senal-14.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/senal-13.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/senal-12.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/senal-11.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/senal-10.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/senal-9.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/senal-8.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/senal-7.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/senal-6.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/senal-5.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/senal-4.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/senal-3.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/senal-2.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/senal-1.png" class="algoparaprecargar" alt="precarga" />
+
+<img src="img/tit-1.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/tit-2.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/tit-3.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/tit-4.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/tit-5.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/tit-6.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/tit-7.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/tit-8.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/tit-9.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/tit-10.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/tit-11.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/tit-12.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/tit-13.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/tit-14.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/tit-15.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/tit-16.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/tit-17.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/tit-18.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/tit-19.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/tit-20.png" class="algoparaprecargar" alt="precarga" />
+
+
+<img src="img/1.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/2.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/3.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/4.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/5.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/6.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/7.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/8.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/9.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/10.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/11.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/12.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/13.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/14.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/15.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/16.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/17.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/18.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/19.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/20.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/21.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/22.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/23.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/24.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/25.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/26.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/27.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/28.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/29.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/30.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/31.OLD.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/31.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/32.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/33.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/34.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/35.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/36.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/37.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/38.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/39.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/40.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/41.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/42.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/43.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/44.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/45.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/46.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/47.png" class="algoparaprecargar" alt="precarga" />
+<img src="img/undefined.png" class="algoparaprecargar" alt="precarga" />
+
+<img src="img/1.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/3.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/5.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/7.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/13.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/16.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/17.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/21.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/22.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/24.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/25.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/28.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/29.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/31.OLD.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/31.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/32.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/33.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/34.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/35.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/38.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/43.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/HieloNieve.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/Obras.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/OtrosPeligros.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/P-1.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/P-3.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/P-4.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/P-13a.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/P-13b.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/P-15a.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/P-21.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/PrhobidoCoches.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/R-104.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/R-114.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/R-301_50.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/R-307.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/R-308.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/R-400c.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/R-403a.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/R-403b.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/R-411_60.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/R-413.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/R-500.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/R-501.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/R-502.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/S-11.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/S-15a.jpg" class="algoparaprecargar" alt="precarga" />
+<img src="img/Taxi.jpg" class="algoparaprecargar" alt="precarga" />
+	<script>!window.jQuery && document.write(unescape('%3Cscript src="js/jquery.1.5.1.min.js"%3E%3C/script%3E'))</script>
+<script type="text/javascript" src="materialize/js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/precarga5.js"></script>
+	<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+	<script type="text/javascript" src="js/sm2/script/soundmanager2.js"></script>
+	<script type="text/javascript" src="js/sm2/index.js"></script>
+	<script type="text/javascript" src="js/"></script>
+
+    </body>
+</html>
